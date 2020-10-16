@@ -2,7 +2,6 @@
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
   padding: 0 1.5rem;
 }
 
@@ -246,18 +245,43 @@ img {
 
 #home-c .process > div {
   position: relative;
-  z-index: 2;
+  background: #fff;
+  -webkit-transition: all 1s;
+  transition: all 1s;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0);
           box-shadow: 0 0 15px rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
+#home-c .process > div .card {
+  position: relative;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  background: #fff;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
+#home-c .process > div .card:hover {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+#home-c .process > div .card:hover .process-icon {
+  background: #ffbc00;
+  color: #333;
+}
+
+#home-c .process > div .card:hover .process-icon .process-step {
+  background: #333;
+}
+
 #home-c .process > div:hover {
-  position: relative;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   z-index: 2;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
@@ -279,15 +303,6 @@ img {
           box-sizing: content-box;
 }
 
-#home-c .process-icon:hover {
-  background: #ffbc00;
-  color: #333;
-}
-
-#home-c .process-icon:hover .process-step {
-  background: #333;
-}
-
 #home-c .process-step {
   position: absolute;
   color: #fff;
@@ -307,7 +322,9 @@ img {
 }
 
 #main-footer {
+  position: relative;
   background: #333;
+  overflow: visible;
   color: #fff;
   height: 5rem;
 }

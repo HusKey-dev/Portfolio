@@ -19,7 +19,7 @@ $bg-image: url('../img/showcase.jpg');
     max-width: $website-with;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
+    // overflow: hidden;
     padding: 0 1.5rem;
 }
 
@@ -275,17 +275,39 @@ img {
             grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
             text-align: center;
+            // overflow: hidden;
 
             > div {
                 position: relative;
-                z-index: 2;
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0);
+                background: #fff;
                 transition: all 1s;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0);
+                z-index: 1;
 
-                &:hover {
+                .card {
                     position: relative;
+                    box-sizing: border-box !important;
+                    background: #fff;
+                    transition: all 1s;
+
+                    &:hover {
+                        box-sizing: border-box;
+                        transform: scale(0.9);
+                        
+                        & .process-icon {
+                            background: $main-color;
+                            color: $dark-color;
+                            
+                            .process-step {
+                                background: $dark-color;
+                            }
+                        }
+                    }
+                }
+                
+                &:hover {
+                    transform: scale(1.5);
                     z-index: 2;
-                    transform: scale(1.1);
                     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
                 }
             }
@@ -303,16 +325,6 @@ img {
                 transition: all 1s;
                 vertical-align: middle;
                 box-sizing: content-box;
-
-                &:hover {
-                    background: $main-color;
-                    // transform: scale(1.25);
-                    color: $dark-color;
-
-                    .process-step {
-                        background: $dark-color;
-                    }
-                }
             }
 
             &-step {
@@ -336,7 +348,9 @@ img {
 
 // Footer
 #main-footer {
+    position: relative;
     background: $dark-color;
+    overflow: visible;
     color: #fff;
     height: 5rem;
 
