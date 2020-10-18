@@ -19,7 +19,6 @@ $bg-image: url('../img/showcase.jpg');
     max-width: $website-with;
     margin-left: auto;
     margin-right: auto;
-    // overflow: hidden;
     padding: 0 1.5rem;
 }
 
@@ -114,9 +113,33 @@ input[class^='btn-']:hover {
     background-color: $main-color;
 }
 
+// Backgrounds
+.bg {
+    &-main {
+        background: $main-color;
+        color: set-text-color($main-color);
+    }
+
+    &-dark {
+        background: $dark-color;
+        color: set-text-color($dark-color);
+    }
+
+    &-light {
+        background: $light-color;
+        color: set-text-color($light-color);
+    }
+
+    &-medium {
+        background: $medium-color;
+        color: set-text-color($medium-color);
+    }
+}
+
 .lead {
     font-size: 1.3rem;
     margin-bottom: 2rem;
+    font-weight: bold;
 }
 
 .text-center {
@@ -213,7 +236,10 @@ img {
     }
 
     &-inner {
-
+        background: $bg-image no-repeat 20% 30% / cover;
+        height: 5.5rem;
+        box-sizing: content-box;
+        border-bottom: 3px solid $main-color;
     }
 }
 
@@ -343,6 +369,49 @@ img {
                 transition: all 1s;
                 box-sizing: content-box;
             }
+        }
+    }
+}
+
+// About Sections
+#about {
+    &-a {
+        .about-info {
+            display: grid;
+            grid-template-areas:
+                'bioimage bio bio'
+                'award1 award2 award3';
+            gap: 1.2rem;
+        }
+
+        // Grid Areas
+        .bio-image {
+            grid-area: bioimage;
+        }
+
+        .bio {
+            grid-area: bio;
+            border-left: 3px solid $main-color;
+            padding: 0.8rem;
+        }
+
+        .award-1 {
+            grid-area: award1;
+        }
+
+        .award-2 {
+            grid-area: award2;
+        }
+
+        .award-3 {
+            grid-area: award3;
+        }
+
+        .award-1 .fas,
+        .award-2 .fas,
+        .award-3 .fas {
+            color: $main-color;
+            margin: 1rem;
         }
     }
 }
