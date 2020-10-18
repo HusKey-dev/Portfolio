@@ -262,28 +262,29 @@ img {
   transition: all 1s;
 }
 
-#home-c .process > div .card:hover {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-}
-
-#home-c .process > div .card:hover .process-icon {
-  background: #ffbc00;
-  color: #333;
-}
-
-#home-c .process > div .card:hover .process-icon .process-step {
-  background: #333;
-}
-
 #home-c .process > div:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   z-index: 2;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+#home-c .process > div:hover .card {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+#home-c .process > div:hover .card .process-icon {
+  background: #ffbc00;
+  color: #333;
+}
+
+#home-c .process > div:hover .card .process-icon .process-step {
+  background: #333;
 }
 
 #home-c .process-icon {
