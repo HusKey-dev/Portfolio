@@ -398,6 +398,57 @@ img {
   margin: 1rem;
 }
 
+#about-b .progress {
+  overflow: hidden;
+  height: 20px;
+  background: #ccc;
+  border-radius: 5px;
+  margin-bottom: 0.3rem;
+}
+
+#about-b .progress div {
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  background: #ffbc00;
+}
+
+#about-b .progress #percent-1 {
+  width: 100%;
+}
+
+#about-b .progress #percent-2 {
+  width: 80%;
+}
+
+#about-b .progress #percent-3 {
+  width: 70%;
+}
+
+#about-b .progress #percent-4 {
+  width: 100%;
+}
+
+#about-b .progress #percent-5 {
+  width: 85%;
+}
+
+#about-b .progress #percent-6 {
+  width: 73%;
+}
+
+#about-c .about-logos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+#about-c .about-logos img {
+  width: 70%;
+}
+
 #main-footer {
   position: relative;
   background: #333;

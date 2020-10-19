@@ -414,6 +414,42 @@ img {
             margin: 1rem;
         }
     }
+
+    &-b {
+        .progress {
+            overflow: hidden;
+            height: 20px;
+            background: $medium-color;
+            border-radius: 5px;
+            margin-bottom: 0.3rem;
+
+            div {
+                height: 100%;
+                color: #fff;
+                text-align: center;
+                background: $main-color;
+            }
+
+            #percent-1 {width: 100%;}
+            #percent-2 {width: 80%;}
+            #percent-3 {width: 70%;}
+            #percent-4 {width: 100%;}
+            #percent-5 {width: 85%;}
+            #percent-6 {width: 73%;}
+        }
+    }
+
+    &-c {
+        .about-logos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+
+            img {
+                width: 70%;
+            }
+        }
+    }
 }
 
 // Footer
