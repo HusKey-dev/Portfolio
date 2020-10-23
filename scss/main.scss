@@ -431,13 +431,37 @@ img {
                 text-align: center;
                 background: $main-color;
             }
+            
+            %percent-shared {
+                animation: progress-bar 2s reverse ease-in-out;
+            }
 
-            #percent-1 {width: 100%;}
-            #percent-2 {width: 80%;}
-            #percent-3 {width: 70%;}
-            #percent-4 {width: 100%;}
-            #percent-5 {width: 85%;}
-            #percent-6 {width: 73%;}
+            #percent {
+                &-1 {
+                    width: 100%;
+                    @extend %percent-shared;
+                }
+                &-2 {
+                    width: 80%;
+                    @extend %percent-shared;
+                }
+                &-3 {
+                    width: 70%;
+                    @extend %percent-shared;
+                }
+                &-4 {
+                    width: 100%;
+                    @extend %percent-shared;
+                }
+                &-5 {
+                    width: 85%;
+                    @extend %percent-shared;
+                }
+                &-6 {
+                    width: 73%;
+                    @extend %percent-shared;
+                }
+            }
         }
     }
 
@@ -480,6 +504,12 @@ img {
                 margin-right: 0.5rem;
             }
         }
+    }
+}
+
+@keyframes progress-bar {
+    to {
+        width: 0%;
     }
 }
 
