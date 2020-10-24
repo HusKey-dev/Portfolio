@@ -318,27 +318,6 @@ img {
                     background: #fff;
                     transition: all 1s;
                 }
-                
-                &:hover {
-                    transform: scale(1.5);
-                    z-index: 2;
-                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-                    border-radius: 5px;
-
-                    .card {
-                        box-sizing: border-box;
-                        transform: scale(0.9);
-
-                        & .process-icon {
-                            background: $main-color;
-                            color: $dark-color;
-                            
-                            .process-step {
-                                background: $dark-color;
-                            }
-                        }
-                    }
-                }
             }
 
             &-icon {
@@ -606,3 +585,5 @@ img {
         }
     }
 }
+
+@import 'media';
