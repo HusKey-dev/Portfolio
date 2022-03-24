@@ -4,17 +4,17 @@ $main-color: #ffbc00;
 $light-color: #f4f4f4;
 $medium-color: #ccc;
 $dark-color: #333;
-$bg-image: url('../img/showcase.jpg');
+$bg-image: url("../img/showcase.jpg");
 
 @function set-text-color($color) {
-    @if(lightness($color) > 50) {
+    @if (lightness($color) > 50) {
         @return #000;
     } @else {
-        @return #fff
+        @return #fff;
     }
 }
 
-@import 'item_grid';
+@import "item_grid";
 
 // Utilities
 .container {
@@ -72,7 +72,7 @@ $bg-image: url('../img/showcase.jpg');
 
 // Bottom Line
 .bottom-line::after {
-    content: '';
+    content: "";
     display: block;
     height: 2px;
     width: 3rem;
@@ -109,9 +109,9 @@ $bg-image: url('../img/showcase.jpg');
     }
 }
 
-button[class^='btn-']:hover,
-a[class^='btn-']:hover,
-input[class^='btn-']:hover {
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
     background-color: $main-color;
 }
 
@@ -156,7 +156,7 @@ input[class^='btn-']:hover {
 }
 
 body {
-    font-family: 'Dosis', sans-serif;
+    font-family: "Dosis", sans-serif;
     line-height: 1.6;
     background: #fff;
 }
@@ -170,7 +170,9 @@ ul {
     list-style: none;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     text-transform: uppercase;
 }
 
@@ -247,7 +249,6 @@ img {
 
 // Home sections
 #home {
-
     // Home section A
     &-a {
         .specials {
@@ -315,6 +316,7 @@ img {
                 .card {
                     position: relative;
                     box-sizing: border-box !important;
+                    padding: 1rem 1rem;
                     background: #fff;
                     transition: all 1s;
                 }
@@ -360,8 +362,8 @@ img {
         .about-info {
             display: grid;
             grid-template-areas:
-                'bioimage bio bio'
-                'award1 award2 award3';
+                "bioimage bio bio"
+                "award1 award2 award3";
             gap: 1.2rem;
         }
 
@@ -410,7 +412,7 @@ img {
                 text-align: center;
                 background: $main-color;
             }
-            
+
             %percent-shared {
                 animation: progress-bar 2s reverse ease-in-out;
             }
@@ -468,7 +470,7 @@ img {
                 display: flex;
                 align-items: center;
             }
-            
+
             p {
                 box-sizing: border-box;
                 border: 1px solid $medium-color;
@@ -497,10 +499,10 @@ img {
     &-a {
         .text-fields {
             display: grid;
-            grid-template-areas: 
-            'name email'
-            'subject phone'
-            'message message';
+            grid-template-areas:
+                "name email"
+                "subject phone"
+                "message message";
             gap: 1.2rem;
             margin-bottom: 1.2rem;
 
@@ -516,7 +518,7 @@ img {
             .email-input {
                 grid-area: email;
             }
-            
+
             .phone-input {
                 grid-area: phone;
             }
@@ -532,7 +534,7 @@ img {
             }
         }
 
-        button[type='submit'] {
+        button[type="submit"] {
             width: 50%;
         }
     }
@@ -580,10 +582,10 @@ img {
 
             &:hover {
                 color: $main-color;
-                border-color: $main-color;;
+                border-color: $main-color;
             }
         }
     }
 }
 
-@import 'media';
+@import "media";
